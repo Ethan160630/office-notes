@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · Office Notes</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B8C82'/%3E%3Cpath d='M11 22V10h4.5a4 4 0 0 1 0 8H11' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --canvas:#EDF1F1; --panel:#FFFFFF; --ink:#112226; --muted:#55706F;
+    --accent:#0B8C82; --line:#DDE5E4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:48px 20px 80px;}
+  header{margin-bottom:32px;}
+  .kicker{font-size:13px; letter-spacing:.14em; color:var(--accent); font-weight:600; text-transform:uppercase;}
+  h1{font-size:32px; line-height:1.25; margin:10px 0 8px; letter-spacing:-.01em;}
+  .meta{font-size:14px; color:var(--muted);}
+  .card{background:var(--panel); border-radius:18px; padding:28px 26px; margin-bottom:18px; border:1px solid var(--line);}
+  h2{font-size:19px; margin:0 0 10px; display:flex; gap:10px; align-items:baseline;}
+  h2 .num{font-size:13px; color:var(--accent); font-weight:600; min-width:22px;}
+  p,li{font-size:15px; color:#1E3335;}
+  p{margin:0 0 12px;}
+  ul{margin:0 0 12px; padding-left:20px;}
+  li{margin-bottom:6px;}
+  strong{color:var(--ink);}
+  .callout{
+    background:#E6F4F1; border-left:3px solid var(--accent); border-radius:10px;
+    padding:14px 16px; margin:16px 0;
+  }
+  .callout p{margin:0; font-size:14.5px;}
+  table{width:100%; border-collapse:collapse; margin:8px 0 4px; font-size:14px;}
+  th,td{text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{color:var(--muted); font-weight:600; font-size:13px;}
+  .langbar{display:flex; gap:8px; margin-bottom:28px; flex-wrap:wrap;}
+  .langbar a{
+    font-size:13px; text-decoration:none; color:var(--muted);
+    border:1px solid var(--line); background:var(--panel);
+    padding:7px 14px; border-radius:999px; min-height:34px; display:inline-flex; align-items:center;
+  }
+  .langbar a.on{color:#fff; background:var(--accent); border-color:var(--accent);}
+  footer{font-size:13px; color:var(--muted); margin-top:36px; text-align:center; line-height:1.9;}
+  #en h1,#en strong,#en p,#en li{letter-spacing:0;}
+  .rule{height:1px;background:var(--line);margin:32px 0;}
+  @media (max-width:480px){
+    .wrap{padding:28px 14px 56px;}
+    h1{font-size:25px;}
+    .card{padding:22px 18px; border-radius:16px;}
+    h2{font-size:17px;}
+    p,li{font-size:14.5px;}
+    table{font-size:13px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Office Notes · MeetingNotes</div>
+    <h1>隐私政策 / Privacy Policy</h1>
+    <div class="meta">生效日期：2026 年 11 月 15 日 · Effective: November 15, 2026</div>
+  </header>
+
+  <div class="langbar">
+    <a href="#zh" class="on">中文</a>
+    <a href="#en">English</a>
+  </div>
+
+  <!-- ===== 中文 ===== -->
+  <section id="zh">
+
+    <div class="card">
+      <h2><span class="num">01</span>一句话概括</h2>
+      <p>Office Notes 是一个<b>在本机完成录音与转写</b>的会议记录工具。默认情况下，你的录音和转写文字只保存在这台 iPhone 上，开发者没有服务器，也拿不到你的内容。</p>
+      <div class="callout">
+        <p>我们没有账号系统、没有广告 SDK、没有行为分析 SDK。App 不会读取你的通讯录、照片、定位。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">02</span>我们处理哪些数据</h2>
+      <table>
+        <tr><th>数据</th><th>用途</th><th>存放位置</th></th></tr>
+        <tr><td>录音音频</td><td>生成转写文字与纪要</td><td>本机 App 沙盒目录</td></tr>
+        <tr><td>转写文字、纪要</td><td>会议库、搜索、导出</td><td>本机 App 沙盒目录</td></tr>
+        <tr><td>偏好设置</td><td>记住识别方式、语言等</td><td>本机（UserDefaults）</td></tr>
+      </table>
+      <p>以上数据均不回传开发者，也不与你的身份关联。</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">03</span>语音识别怎么走</h2>
+      <p><b>默认：</b>使用 Apple 系统提供的端侧语音识别（Speech framework）。音频在设备上处理，除非系统本身需要联网校准，此时由 Apple 按其隐私政策处理。</p>
+      <p><b>可选：</b>你可以在「设置 → 识别」里填入自己的第三方语音识别服务地址与密钥。一旦填写，音频或文字会被发送到<b>你指定的那个服务</b>，由该服务商按其自身条款处理；开发者不经手、也无法访问这部分数据。</p>
+      <div class="callout">
+        <p>App 出厂不包含任何第三方密钥，也不会替你选择服务商。是否启用云端识别，完全由你决定，随时可以关掉并清除密钥。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">04</span>权限说明</h2>
+      <ul>
+        <li><b>麦克风</b>：仅在你按下「开始录音」到「停止」之间使用。</li>
+        <li><b>语音识别</b>：把录音转成文字。</li>
+        <li><b>蓝牙</b>：连接蓝牙耳机录音时接收其麦克风声音。</li>
+        <li><b>后台音频</b>：锁屏或切换 App 时保持正在进行的录音不中断；不用于后台播放。</li>
+      </ul>
+      <p>所有权限都可以在 iOS「设置 → 办公助理」中随时关闭。</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">05</span>数据保留与删除</h2>
+      <p>录音与文字保存在本机，保留多久由你决定。删除方式：</p>
+      <ul>
+        <li>在会议详情页删除单条会议（会同时删除对应音频文件）；</li>
+        <li>在会议列表使用批量删除；</li>
+        <li>卸载 App 会删除 App 沙盒内的全部数据。</li>
+      </ul>
+      <p>删除后无法恢复，请自行导出需要长期保存的纪要。</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">06</span>共享与披露</h2>
+      <p>我们不出售、不出租、不交换你的数据。只有在下列情形才可能涉及第三方：</p>
+      <ul>
+        <li>你自己配置了第三方语音识别或 AI 服务（见第 03 节）；</li>
+        <li>你主动使用系统分享导出文件；</li>
+        <li>法律要求或有权机关依法调取——但我们本地无服务器，通常无从提供。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">07</span>儿童</h2>
+      <p>本 App 不面向 13 岁以下儿童，也不会有意收集儿童个人信息。</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">08</span>政策更新与联系方式</h2>
+      <p>政策有实质变更时，会在本页面更新生效日期并在 App 内提示。</p>
+      <p>疑问或数据相关请求：<b>your-email@example.com</b></p>
+    </div>
+
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- ===== English ===== -->
+  <section id="en" lang="en">
+
+    <div class="card">
+      <h2><span class="num">01</span>Summary</h2>
+      <p>Office Notes records and transcribes meetings <b>on your device</b>. By default, audio and transcripts stay in this iPhone's app container. The developer operates no server and cannot access your content.</p>
+      <div class="callout">
+        <p>No account system, no advertising SDK, no analytics SDK. The app does not access your contacts, photos, or location.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">02</span>Data we process</h2>
+      <table>
+        <tr><th>Data</th><th>Purpose</th><th>Where it lives</th></tr>
+        <tr><td>Audio recordings</td><td>Producing transcripts and summaries</td><td>App sandbox on device</td></tr>
+        <tr><td>Transcripts, summaries</td><td>Meeting library, search, export</td><td>App sandbox on device</td></tr>
+        <tr><td>Preferences</td><td>Remembering recognition mode, language</td><td>On device (UserDefaults)</td></tr>
+      </table>
+      <p>None of this is sent to the developer, and none is linked to your identity.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">03</span>How speech recognition works</h2>
+      <p><b>Default:</b> Apple's on-device speech framework. Audio is processed on the device, except where iOS itself performs a network-assisted check, which Apple handles under its own privacy policy.</p>
+      <p><b>Optional:</b> You may enter your own third-party transcription endpoint and key under Settings → Recognition. Once you do, audio or text is sent to <b>that service</b> and handled under its terms. The developer does not operate, proxy, or observe that traffic.</p>
+      <div class="callout">
+        <p>The app ships with no third-party key and picks no vendor for you. Cloud transcription is entirely your choice and can be switched off at any time.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">04</span>Permissions</h2>
+      <ul>
+        <li><b>Microphone</b> — active only between pressing Start and Stop.</li>
+        <li><b>Speech recognition</b> — turning recordings into text.</li>
+        <li><b>Bluetooth</b> — receiving audio from Bluetooth headset microphones.</li>
+        <li><b>Background audio</b> — keeping an in-progress recording alive when the screen locks or you switch apps; never used for background playback.</li>
+      </ul>
+      <p>All permissions can be revoked at any time in iOS Settings → Office Notes.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">05</span>Retention and deletion</h2>
+      <p>Recordings and transcripts stay on your device for as long as you keep them. To delete:</p>
+      <ul>
+        <li>Delete a meeting from its detail screen (its audio file is removed too);</li>
+        <li>Use batch delete in the meeting list;</li>
+        <li>Uninstalling the app removes everything in its container.</li>
+      </ul>
+      <p>Deletion is permanent. Export anything you need to keep.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">06</span>Sharing and disclosure</h2>
+      <p>We do not sell, rent, or trade your data. Third parties are involved only when:</p>
+      <ul>
+        <li>you configure your own transcription or AI service (see section 03);</li>
+        <li>you explicitly share an exported file through iOS;</li>
+        <li>required by law — though with no server of ours, there is normally nothing to produce.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">07</span>Children</h2>
+      <p>The app is not directed to children under 13 and does not knowingly collect their personal information.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">08</span>Changes and contact</h2>
+      <p>Material changes will be reflected here with a new effective date and noted in the app.</p>
+      <p>Questions or data requests: <b>your-email@example.com</b></p>
+    </div>
+
+  </section>
+
+  <footer>
+    Office Notes · 办公助理<br>
+    This page is self-contained and contains no trackers or third-party scripts.
+  </footer>
+
+</div>
+</body>
+</html>
